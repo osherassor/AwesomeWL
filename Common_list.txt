@@ -74,7 +74,6 @@
 .apdisk
 .appveyor.yml
 .apt_generated
-.arch-internal-preview.css
 .architect
 .aws
 .aws/config
@@ -1285,7 +1284,6 @@ contact
 contactadministrators!default.jspa
 contactus
 content/images
-content/images/favicon.ico
 content/plugins
 content/plugins/uploader
 content/plugins/uploader/filechoose.html
@@ -1296,7 +1294,6 @@ cookieauth.dll
 cookieexample
 corehome
 corehome/images
-corehome/images/favicon.png
 cpanel.php
 creatives
 current
@@ -1315,7 +1312,6 @@ deadjoe
 dev_mode
 dlpcenter
 dlpcenter/images
-dlpcenter/images/favicon.ico
 dlpcenter/loginform.sms
 dmsdump
 docs-tech
@@ -1556,7 +1552,6 @@ image/withpath
 image/withpath/c:\windows\win.ini
 images
 images/remote
-images/favicon.ico
 importtechnicians
 index
 index/index
@@ -1617,7 +1612,6 @@ layerslider
 layerslider/assets
 layerslider/assets/static
 layerslider/assets/static/public
-layerslider/assets/static/public/front.css
 legal
 letsencrypt
 letsencrypt/index
@@ -2943,7 +2937,6 @@ actuator/events
 actuator/events.json
 actuator/exportregisteredservices
 actuator/exportregisteredservices.json
-actuator/favicon.ico
 actuator/features
 actuator/features.json
 actuator/flyway
@@ -4672,8 +4665,6 @@ assets/i18n/en.json
 assets/icons
 assets/icons/icon.png
 assets/img
-assets/img/favicon
-assets/img/favicon/favicon.ico
 assets/js
 assets/js/fasc-buttons
 assets/js/fasc-buttons/popup.php
@@ -4697,7 +4688,6 @@ assets/php/profile.php
 assets/pubspec.yaml
 assets/static
 assets/static/public
-assets/static/public/front.css
 assets/uploader.swf
 assets/vendor
 assets/vendor/jqueryfiletree
@@ -5190,7 +5180,6 @@ better-wp-security/readme.txt
 bfc
 bg
 bgservlets
-bgservlets/test.css
 bibliopac
 bibliopac/bin
 bibliopac/bin/wxis.exe
@@ -5229,7 +5218,6 @@ bin/login/xwiki/xwikilogin
 bin/login/xwikilogin
 bin/php.ini
 bin/prop.xml
-bin/querybuilder.json.css
 bin/redir.asp
 bin/reset-db-prod.sh
 bin/reset-db.sh
@@ -6914,7 +6902,6 @@ content/jw_allvideos/includes
 content/jw_allvideos/includes/download.php
 content/login
 content/login.html
-content/login/favicon.ico
 content/useradmin.html
 content/view.html
 content_packs
@@ -7001,7 +6988,6 @@ core/connector/php/connector.php
 core/content
 core/content/login
 core/content/login.html
-core/content/login/favicon.ico
 core/frontpage_welcome.php
 core/include
 core/include/mymailer.class.php
@@ -7190,7 +7176,6 @@ csproj
 css
 css.php
 css/css.php
-css/eonweb.css
 css/footer.js
 css_optimiser.php
 css_parser.php
@@ -7243,7 +7228,6 @@ custom.html
 custom.xml
 custom/db.ini
 custom_icons
-custom_icons/favicon.ico
 custom_log
 custom_model_path
 custom_model_path/recruit.filelist.txt
@@ -7270,7 +7254,6 @@ customers.txt
 customers.xls
 customgroupicons
 customization
-customization/favicon.ico
 customize
 cute
 cv
@@ -7336,7 +7319,6 @@ dashboard/#
 dashboard/#/signin
 dashboard/auth
 dashboard/auth/login
-dashboard/favicon.ico
 dashboard/index.html
 dashboard/index.php
 dashboard/snapshot
@@ -8527,7 +8509,6 @@ envato-elements/readme.txt
 environ
 environment
 environment.rb
-eonweb.css
 eos
 ep
 episerver
@@ -8936,13 +8917,6 @@ fastlane/readme.md
 fastlane/report.xml
 fastlane/screenshots
 fastlane/test_output
-favicon
-favicon-32x32.png
-favicon-by-realfavicongenerator
-favicon-by-realfavicongenerator/readme.txt
-favicon.ico
-favicon.png
-favicon/favicon.ico
 favorite
 favorites
 fb
@@ -9373,7 +9347,6 @@ frm_attach
 frob
 from
 front
-front.css
 front/getpingdata
 front/privatelogin.jsp
 front/send.php
@@ -9760,7 +9733,6 @@ granite/core
 granite/core/content
 granite/core/content/login
 granite/core/content/login.html
-granite/core/content/login/favicon.ico
 granite/offloading
 granite/offloading/content
 granite/offloading/content/view.html
@@ -9782,9 +9754,7 @@ graph/login
 graphdata.cgi
 graph_view.php
 graphiql
-graphiql.css
 graphiql.js
-graphiql.min.css
 graphiql.min.js
 graphiql.php
 graphiql/finland
@@ -10372,7 +10342,6 @@ ico
 icon
 icon.png
 icons
-icons/favicon-32x32.png
 icons/icon.png
 icq
 ics
@@ -10459,7 +10428,6 @@ images/background.jpg
 images/c99.php
 images/checklist-icon.php
 images/componentutilslogin.jpg
-images/favicon.png
 images/flip
 images/green-on.png
 images/json
@@ -10483,11 +10451,7 @@ imcat/root/tools/adbug/binfo.php
 img
 img.php
 img/custom_icons
-img/custom_icons/favicon.ico
-img/favicon
-img/favicon/favicon.ico
 img/icons
-img/icons/favicon-32x32.png
 img/versa-logo.png
 img2
 imgdownload.php
@@ -11746,7 +11710,6 @@ libs/granite/core
 libs/granite/core/content
 libs/granite/core/content/login
 libs/granite/core/content/login.html
-libs/granite/core/content/login/favicon.ico
 libs/granite/offloading
 libs/granite/offloading/content
 libs/granite/offloading/content/view.html
@@ -12032,7 +11995,6 @@ login/xwikilogin
 login/admin
 login/admin/admin.asp
 login/default.aspx
-login/favicon.ico
 login/forgetpswd.php
 login/home
 login/home/login.view
@@ -12093,7 +12055,6 @@ loginredir
 logins
 loginsave
 loginsave.php
-loginstatus.css
 loginsupe.php
 loginsuper
 logo
@@ -14591,14 +14552,12 @@ plugins/2-click-socialmedia-buttons/libs
 plugins/2-click-socialmedia-buttons/libs/xing.php
 plugins/corehome
 plugins/corehome/images
-plugins/corehome/images/favicon.png
 plugins/flagem
 plugins/flagem/flagit.php
 plugins/layerslider
 plugins/layerslider/assets
 plugins/layerslider/assets/static
 plugins/layerslider/assets/static/public
-plugins/layerslider/assets/static/public/front.css
 plugins/wordpress
 plugins/wordpress/aaspose-pdf-exporter
 plugins/wordpress/aaspose-pdf-exporter/aspose_pdf_exporter_download.php
@@ -14911,8 +14870,6 @@ plugins/fancy-product-designer/inc
 plugins/fancy-product-designer/inc/custom-image-handler.php
 plugins/fast-indexing-api
 plugins/fast-indexing-api/readme.txt
-plugins/favicon-by-realfavicongenerator
-plugins/favicon-by-realfavicongenerator/readme.txt
 plugins/fckeditor
 plugins/featurific-for-wordpress
 plugins/featurific-for-wordpress/cached_image.php
@@ -15800,7 +15757,6 @@ portal/conf
 portal/conf/config.properties
 portal/elementecodeaddon
 portal/elementecodeaddon/getsqldata
-portal/favicon.ico
 portal/file
 portal/fiori
 portal/images
@@ -16193,7 +16149,6 @@ public/default.html
 public/error.jsp
 public/examples
 public/examples/resources
-public/front.css
 public/hot
 public/index.html
 public/index.php
@@ -16308,7 +16263,6 @@ query-printrows.view
 query.log
 querysysuser
 querybuilder
-querybuilder.json.css
 querybuilder/logonform.jsp
 question
 questions
@@ -16673,7 +16627,6 @@ resource=
 resource=/etc
 resource_config.json
 resources.xml
-resources/.arch-internal-preview.css
 resources//charts.swf
 resources/add_collection_ajaxprocessor.jsp
 resources/autogenerated
@@ -17221,8 +17174,6 @@ securityrealm/user/admin/descriptorbyname/org.jenkinsci.plugins.workflow.cps.cps
 securityrealm/user/admin/descriptorbyname/org.jenkinsci.plugins.workflow.cps.cpsflowdefinition/checkscriptcompile
 seed
 seeyon
-seeyon/personalbind.do.jpg
-seeyon/thirdpartycontroller.do.css
 seeyon/webmail.do
 select
 select_project.php
@@ -17894,7 +17845,6 @@ sling/cqform
 sling/cqform/defaultlogin.html
 sling/info.sessioninfo.json
 sling/info.sessioninfo.txt
-sling/loginstatus.css
 slog_client
 sls
 sls/auth
@@ -18276,7 +18226,6 @@ static/c:/windows
 static/c:/windows/win.ini
 static/css
 static/customization
-static/customization/favicon.ico
 static/dist
 static/dist/assets
 static/dist/assets/icons
@@ -18285,19 +18234,14 @@ static/dump.sql
 static/emq.ico
 static/etc
 static/images
-static/images/favicon.ico
 static/img
 static/img/custom_icons
-static/img/custom_icons/favicon.ico
 static/img/icons
-static/img/icons/favicon-32x32.png
 static/index.html
 static/js
 static/link
 static/login
-static/login/favicon.ico
 static/public
-static/public/front.css
 static/shards
 static/shards.html
 static/shards/html
@@ -18398,7 +18342,6 @@ struts2-showcase/showcase.action
 sts
 sts/content
 sts/content/images
-sts/content/images/favicon.ico
 stssys.htm
 student
 students
@@ -18661,7 +18604,6 @@ system/authentication/services/test/backend
 system/authentication/services/test/backend/connection
 system/authentication/services/test/backend/login
 system/bgservlets
-system/bgservlets/test.css
 system/cache
 system/cdscriptegrator
 system/cdscriptegrator/libraries
@@ -18714,7 +18656,6 @@ system/sling/cqform
 system/sling/cqform/defaultlogin.html
 system/sling/info.sessioninfo.json
 system/sling/info.sessioninfo.txt
-system/sling/loginstatus.css
 system/storage
 system/urlwhitelist
 system/urlwhitelist/check
@@ -18881,7 +18822,6 @@ test.aspx
 test.bat
 test.cgi
 test.chm
-test.css
 test.hello
 test.htm
 test.html
@@ -19048,9 +18988,7 @@ think\\app
 think\\app/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=1
 thinkphp
 thinkphp/base
-third-party
-thirdpartycontroller.do.css
-this
+third-partythis
 this.lcdispatcher
 thread
 threaddump
@@ -19445,7 +19383,6 @@ ui/content/dumplibs.html
 ui/content/dumplibs.rebuild.html
 ui/content/dumplibs.test.html
 ui/content/dumplibs.validate.html
-ui/favicon.ico
 ui/gradio_api
 ui/gradio_api/file=https:
 ui/gradio_api/file=https:oast.me
@@ -19936,9 +19873,7 @@ v1/folder
 v1/get-users-data
 v1/graph
 v1/graphiql
-v1/graphiql.css
 v1/graphiql.js
-v1/graphiql.min.css
 v1/graphiql.min.js
 v1/graphiql.php
 v1/graphiql/finland
@@ -20037,9 +19972,7 @@ v2/d2ozbcy
 v2/explorer
 v2/graph
 v2/graphiql
-v2/graphiql.css
 v2/graphiql.js
-v2/graphiql.min.css
 v2/graphiql.min.js
 v2/graphiql.php
 v2/graphiql/finland
@@ -20077,9 +20010,7 @@ v3/doc
 v3/explorer
 v3/graph
 v3/graphiql
-v3/graphiql.css
 v3/graphiql.js
-v3/graphiql.min.css
 v3/graphiql.min.js
 v3/graphiql.php
 v3/graphiql/finland
@@ -20107,9 +20038,7 @@ v4/documentation
 v4/explorer
 v4/graph
 v4/graphiql
-v4/graphiql.css
 v4/graphiql.js
-v4/graphiql.min.css
 v4/graphiql.min.js
 v4/graphiql.php
 v4/graphiql/finland
@@ -20508,7 +20437,6 @@ wa
 wa-hap.exe
 wa.exe
 wabam
-wabam/favicon.ico
 wallet.dat
 wallet.json
 wallpaper
@@ -21184,7 +21112,6 @@ wp-content/plugins/layerslider
 wp-content/plugins/layerslider/assets
 wp-content/plugins/layerslider/assets/static
 wp-content/plugins/layerslider/assets/static/public
-wp-content/plugins/layerslider/assets/static/public/front.css
 wp-content/plugins/wordpress
 wp-content/plugins/wordpress/aaspose-pdf-exporter
 wp-content/plugins/wordpress/aaspose-pdf-exporter/aspose_pdf_exporter_download.php
@@ -21483,8 +21410,6 @@ wp-content/plugins/fancy-product-designer/inc
 wp-content/plugins/fancy-product-designer/inc/custom-image-handler.php
 wp-content/plugins/fast-indexing-api
 wp-content/plugins/fast-indexing-api/readme.txt
-wp-content/plugins/favicon-by-realfavicongenerator
-wp-content/plugins/favicon-by-realfavicongenerator/readme.txt
 wp-content/plugins/featurific-for-wordpress
 wp-content/plugins/featurific-for-wordpress/cached_image.php
 wp-content/plugins/finder
