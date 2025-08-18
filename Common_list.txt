@@ -6,28 +6,6 @@
 !ut
 !ut/p
 !ut/p/z1
-#!/auth
-#!/dashboards
-#!/login
-#!/printer
-#!/printer/prusa_i3
-#!/printer/prusa_i3/print
-#/admin
-#/admin/dashboard
-#/dashboards
-#/devices
-#/install
-#/install/main
-#/login
-#/pipelines
-#/settings
-#/signin
-#connection
-#dashboard
-#login
-#navigate
-#navigate/login
-#welcome
 ./bash_history
 ./etc
 ./etc/.
@@ -1362,7 +1340,6 @@ docuware
 docuware/identity
 docuware/identity/account
 docuware/identity/account/login
-documents and settings
 domain_credential_report_excel
 downexcelbeanservlet
 download.aspx
@@ -1901,7 +1878,6 @@ procfile.dev
 procfile.offline
 products
 program
-program files
 projects
 protectmanager
 protectmanager/logon
@@ -3573,7 +3549,6 @@ administrator/logs
 administrator/manifests
 administrator/manifests/files
 administrator/manifests/files/joomla.xml
-administrator/manifests/files/joomla.xml # >= 1.6.0
 administrator/phpmyadmin
 administrator/web
 administratoraccounts
@@ -5369,7 +5344,7 @@ blow
 blue
 bm
 bmc
-bmc/info # firmware version and other info (idrac9)
+bmc/info
 bmz_cache
 bnnr
 bo
@@ -7309,7 +7284,7 @@ dana-na/auth/url_3/welcome.cgi
 dana-na/auth/url_default
 dana-na/auth/url_default/welcome.cgi
 dana-na/nc
-dana-na/nc/nc_gina_ver.txt # not present in newer release
+dana-na/nc/nc_gina_ver.txt
 dark
 darkstat
 dashboard-statistics.xml
@@ -8976,7 +8951,7 @@ federation/v1
 federation/v1/version
 fedora
 feed
-feed/ is blocked
+feed/
 feed/rdf
 feedback
 feedback.php
@@ -9086,7 +9061,6 @@ files/home/000~root~000
 files/home/000~root~000/etc
 files/installer.cleanup.php
 files/joomla.xml
-files/joomla.xml # >= 1.6.0
 files/kcfinder
 files/kcfinder/files
 files/kcfinder/files/home
@@ -10715,7 +10689,7 @@ inf
 inflation
 influxdb
 infn.it
-info # firmware version and other info (idrac9)
+info
 info.cgi
 info.html
 info.json
@@ -11169,7 +11143,6 @@ jonas-web.xml
 joomla
 joomla.rar
 joomla.xml
-joomla.xml # >= 1.6.0
 joomla.zip
 joomla/administrator
 joomla/database
@@ -22601,7 +22574,7 @@ dhcpd.conf
 etc/network
 etc/cni/net.d
 configmap.yaml
-config.yaml 
+config.yaml
 rbac.yaml
 role.yaml
 rolebinding.yaml
@@ -22701,7 +22674,7 @@ console/login.jsp
 apache.logs"
 /public/js
 product-list.php
-dvwssr.dll "
+dvwssr.dll
 document*.pdf
 commodities.php
 seller
@@ -22732,7 +22705,7 @@ homedir/etc
 oauth2/v2.0/authorize
 device_status.html
 homedir
-vigor login page
+vigor
 contacts.txt
 vood/cgi-bin
 editor/filemanager/connectors/uploadtest.html
@@ -22867,6 +22840,8 @@ netw_tcp.shtml
 webArch/mainFrame.cgi
 mainFrame.cgi
 webeye login.ml
+login.ml
+webeye
 cgi.asx
 comment.php
 map.asp
@@ -22883,7 +22858,7 @@ catalog.nsf
 snitz_forums_2000.mdb
 rdp
 plog/register.php
-robpoll.cgi 
+robpoll.cgi
 phpexplorer.php
 list.php
 gs/adminlogin.aspx
@@ -22907,7 +22882,8 @@ irc.cgi
 root.asp
 exchange/logon.asp
 zebra.conf
-indexFrame.shtml Axis
+indexFrame.shtml
+Axis
 search/admin.php
 wand.dat
 dbconn
@@ -22916,7 +22892,7 @@ cricket/grapher.cgi
 cricket
 grapher.cgi
 password.dat
-access.log 
+access.log
 mysql.conf
 mysql_config
 eml
@@ -22948,7 +22924,8 @@ footer.inc.php
 info.inc.php
 custva.asp
 cgiirc.config
-main.php phpMyAdmin
+main.php
+phpMyAdmin
 ManyServers.htm
 vbulletin
 mystuff.xml
