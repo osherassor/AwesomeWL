@@ -18,9 +18,9 @@
 
 | File | Lines | Purpose |
 |---|---:|---|
-| [`Common_list.txt`](Common_list.txt) | **25,265** | Files & directories — content discovery (`ffuf`, `feroxbuster`, `gobuster`, `dirsearch`, `katana`) |
-| [`subdomains`](subdomains) | **10,065** | Subdomain candidates — internal + external recon (`puredns`, `shuffledns`, `amass`, `LANWhisper`) |
-| [`subdomains_quick_win.txt`](subdomains_quick_win.txt) | **100** | Top-100 lateral-movement targets for internal pentest — fastest path to creds, code execution, or DA |
+| [`web-application/Common_list.txt`](web-application/Common_list.txt) | **25,265** | Files & directories — content discovery (`ffuf`, `feroxbuster`, `gobuster`, `dirsearch`, `katana`) |
+| [`subdomains/subdomains.txt`](subdomains/subdomains.txt) | **10,065** | Subdomain candidates — internal + external recon (`puredns`, `shuffledns`, `amass`, `LANWhisper`) |
+| [`subdomains/subdomains_quick_win.txt`](subdomains/subdomains_quick_win.txt) | **100** | Top-100 lateral-movement targets for internal pentest — fastest path to creds, code execution, or DA |
 
 Most public wordlists were last seriously refreshed when jQuery was still in fashion. AwesomeWL extends the classic SecLists / dirsearch / dirbuster heritage with **~5,000 modern entries** that target what teams actually deploy today: Claude / Cursor / Aider configs, MCP servers, Wrangler `.dev.vars`, Drizzle / Convex schemas, AI agent prompt files, and Cloudflare Workers internals.
 
@@ -30,7 +30,7 @@ Most public wordlists were last seriously refreshed when jQuery was still in fas
 
 ### 🔉 [LANWhisper](https://github.com/osherassor/LANWhisper) — Internal DNS recon
 
-LANWhisper is the **companion tool** for `subdomains` — a Python CLI that resolves a list of asset hostnames against system or custom DNS servers and produces JSON / CSV / HTML / TXT reports. It pairs naturally with `AwesomeWL/subdomains` because the list was deliberately built for **both internal and external recon** (corporate AD trees, OOB management, M365/Skype federation, plus modern SaaS / AI / edge platforms).
+LANWhisper is the **companion tool** for `subdomains/subdomains.txt` — a Python CLI that resolves a list of asset hostnames against system or custom DNS servers and produces JSON / CSV / HTML / TXT reports. It pairs naturally with `AwesomeWL/subdomains` because the list was deliberately built for **both internal and external recon** (corporate AD trees, OOB management, M365/Skype federation, plus modern SaaS / AI / edge platforms).
 
 ```bash
 # Install LANWhisper
@@ -39,20 +39,20 @@ python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
 # Pull the AwesomeWL subdomain list
-curl -sO https://raw.githubusercontent.com/osherassor/AwesomeWL/main/subdomains
+curl -sO https://raw.githubusercontent.com/osherassor/AwesomeWL/main/subdomains/subdomains.txt
 
 # Internal sweep against a corporate DNS server, stealth mode
 ./lanwhisper.py \
     --domain corp.local \
     --server 10.0.0.53 \
-    --source ./subdomains \
+    --source ./subdomains/subdomains.txt \
     --stealth \
     --output ./out
 
 # External sweep against an in-scope target
 ./lanwhisper.py \
     --domain target.com \
-    --source ./subdomains \
+    --source ./subdomains/subdomains.txt \
     --workers 128 \
     --output ./out
 ```
@@ -69,41 +69,41 @@ Outputs go to `./out/run_YYYYMMDD_HHMMSS_<id>/` — JSON for piping, CSV for spr
 
 ```bash
 # ffuf — fast, with status filtering
-ffuf -w Common_list.txt -u https://target.com/FUZZ \
+ffuf -w web-application/Common_list.txt -u https://target.com/FUZZ \
      -mc 200,204,301,302,307,401,403 -fs 0 -t 50
 
 # feroxbuster — recursive, with extensions
-feroxbuster -u https://target.com -w Common_list.txt \
+feroxbuster -u https://target.com -w web-application/Common_list.txt \
      -x php,html,json,yaml,md,env,bak -d 3
 
 # gobuster
-gobuster dir -u https://target.com -w Common_list.txt \
+gobuster dir -u https://target.com -w web-application/Common_list.txt \
      -x php,json,yaml,bak -t 50
 
 # katana — for crawling-augmented discovery
-katana -u https://target.com -d 3 -jc -w Common_list.txt
+katana -u https://target.com -d 3 -jc -w web-application/Common_list.txt
 
 # nuclei (fuzzing-templates with custom wordlist)
-nuclei -u https://target.com -t fuzzing-templates/ -V wordlist=Common_list.txt
+nuclei -u https://target.com -t fuzzing-templates/ -V wordlist=web-application/Common_list.txt
 ```
 
 ### Subdomain brute-force
 
 ```bash
 # puredns — fastest pure brute-force
-puredns bruteforce subdomains target.com \
+puredns bruteforce subdomains/subdomains.txt target.com \
      -r resolvers.txt -w resolved.txt
 
 # shuffledns
-shuffledns -d target.com -w subdomains \
+shuffledns -d target.com -w subdomains/subdomains.txt \
      -r resolvers.txt -mode bruteforce
 
 # amass — pair with subdomains as alteration source
-amass enum -d target.com -brute -w subdomains \
+amass enum -d target.com -brute -w subdomains/subdomains.txt \
      -src -o amass.out
 
 # dnsx — resolve and validate
-sed "s/$/.target.com/" subdomains | dnsx -resp -silent
+sed "s/$/.target.com/" subdomains/subdomains.txt | dnsx -resp -silent
 
 # alterx — generate permutations from your already-found subs
 echo target.com | alterx -en "subdomains" | dnsx -silent
@@ -114,27 +114,27 @@ echo target.com | alterx -en "subdomains" | dnsx -silent
 ```bash
 # 1. Resolve internal-flavored entries against the corp DNS
 ./lanwhisper.py --domain corp.local --server 10.0.0.53 \
-                --source subdomains --stealth -o ./scope
+                --source subdomains/subdomains.txt --stealth -o ./scope
 
 # 2. Filter for live HTTP services
 cat scope/run_*/results.csv | cut -d, -f3 | sort -u \
     | httpx -title -tech-detect -status-code -o live.txt
 
 # 3. Hit the live ones with the file wordlist
-xargs -I {} -a live.txt ffuf -w Common_list.txt -u {}/FUZZ -mc 200,401,403
+xargs -I {} -a live.txt ffuf -w web-application/Common_list.txt -u {}/FUZZ -mc 200,401,403
 ```
 
 ---
 
 ## What makes the lists different
 
-### `subdomains_quick_win.txt` — 100 lateral-movement targets
+### `subdomains/subdomains_quick_win.txt` — 100 lateral-movement targets
 
 A focused 100-entry list for **internal pentest first-blood**. Run it first against the corp DNS — every hit is a system that, when compromised, typically yields one of: source code + pipeline secrets, plaintext domain credentials, code-push to other hosts, or full hypervisor / backup access.
 
 ```bash
 ./lanwhisper.py --domain corp.local --server 10.0.0.53 \
-                --source subdomains_quick_win.txt --output ./quick_win
+                --source subdomains/subdomains_quick_win.txt --output ./quick_win
 ```
 
 **Categories** (rough tier-1 lateral-movement value):
@@ -158,7 +158,7 @@ A focused 100-entry list for **internal pentest first-blood**. Run it first agai
 
 > **Why these specifically:** every entry on this list has one of three properties → (1) typically holds plaintext creds or LDAP binds, (2) lets you push code/binaries to other hosts, or (3) gives you administrator access to the underlying compute (hypervisor, backup, OOB, MDM). Hit one and you're often a single misconfig away from domain admin.
 
-### `Common_list.txt` — coverage map
+### `web-application/Common_list.txt` — coverage map
 
 <details>
 <summary><strong>AI coding assistants & MCP</strong> (click to expand)</summary>
@@ -244,7 +244,7 @@ Sanity, Payload (`payload-types.ts`), Strapi, Tina, Hygraph, Contentlayer, KeySt
 
 </details>
 
-### `subdomains` — coverage map
+### `subdomains/subdomains.txt` — coverage map
 
 <details>
 <summary><strong>External recon — modern stack</strong></summary>
@@ -337,7 +337,7 @@ Open a PR with a brief note on what tool / framework / vertical the entries targ
 
 Built and maintained by [@osherassor](https://github.com/osherassor) — security researcher, pentester, CTF player.
 
-**Companion tooling:** [LANWhisper](https://github.com/osherassor/LANWhisper) (internal DNS recon, designed to consume `subdomains` directly).
+**Companion tooling:** [LANWhisper](https://github.com/osherassor/LANWhisper) (internal DNS recon, designed to consume `subdomains/subdomains.txt` directly).
 
 **Heritage:** classic dirbuster / RAFT / SecLists, extended with modern tooling and tradecraft those lists predate.
 
