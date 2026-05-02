@@ -11,7 +11,25 @@
 | File | Lines | Purpose |
 |---|---:|---|
 | [`Common_list.txt`](Common_list.txt) | **25,265** | Files & directories for content discovery (`ffuf`, `feroxbuster`, `gobuster`, `dirsearch`) |
-| [`subdomains`](subdomains) | **5,146** | Subdomain candidates for DNS brute-forcing (`puredns`, `shuffledns`, `amass`) |
+| [`subdomains`](subdomains) | **6,933** | Subdomain candidates for DNS brute-forcing (`puredns`, `shuffledns`, `amass`) |
+
+### `subdomains` — modernized for 2025-2026
+
+The subdomain list now includes **1,787 new candidates** targeting the modern stack:
+
+- **AI products**: `ai`, `gpt`, `claude`, `copilot`, `gemini`, `chat-api`, `agent-api`, `mcp`, `mcp-gateway`, `prompt-studio`, `playground`, `inference`, `embeddings`, `rag`, `vector-search`
+- **Inference providers**: `groq`, `together`, `fireworks`, `replicate`, `modal`, `runpod`, `anyscale`, `bentoml`
+- **Vector DBs**: `pinecone`, `qdrant`, `weaviate`, `chroma`, `milvus`, `lancedb`, `turbopuffer`
+- **Modern auth**: `clerk`, `workos`, `stytch`, `kinde`, `logto`, `supertokens`, `better-auth`, `lucia`, `descope`, `frontegg`
+- **Modern data**: `turso`, `neon`, `xata`, `supabase`, `convex`, `electric`, `triplit`, `instantdb`, `motherduck`
+- **Edge/serverless**: `workers`, `r2`, `kv`, `d1`, `durable-objects`, `fly`, `railway`, `sst`, `pulumi`
+- **Realtime**: `liveblocks`, `partykit`, `replicache`, `livekit`, `mux`, `daily-internal`
+- **Code-AI**: `cody`, `codeium`, `tabnine`, `cursor`, `aider`, `windsurf`, `coderabbit`, `sweep`, `greptile`
+- **Observability**: `posthog`, `axiom`, `tinybird`, `highlight`, `honeycomb`, `otel-collector`, `pyroscope`
+- **AI security/governance**: `prompt-firewall`, `ai-firewall`, `ai-waf`, `mcp-firewall`, `ai-governance`, `model-cards`, `ai-bom`, `ai-policy`, `eu-ai-act`
+- **Versioned variants**: `api-v2`/`v3`/`v4`/`v5`, `staging`/`canary`/`preview`/`edge` suffixes for hundreds of services
+- **Web3/AI crossover**: `agent-mesh`, `agent-router`, `mcp-router`, `mev`, `flashbots`, `eigenlayer`, `restaking`
+- **Specific model names**: `gpt-4o`, `o1`, `o3`, `sonnet`, `opus`, `haiku`, `gemini-pro`, `llama-4`, `qwen-3`, `deepseek-r1`, `phi-4`
 
 ### `Common_list.txt` — what makes it different
 
