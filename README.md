@@ -20,6 +20,7 @@
 |---|---:|---|
 | [`Common_list.txt`](Common_list.txt) | **25,265** | Files & directories — content discovery (`ffuf`, `feroxbuster`, `gobuster`, `dirsearch`, `katana`) |
 | [`subdomains`](subdomains) | **10,065** | Subdomain candidates — internal + external recon (`puredns`, `shuffledns`, `amass`, `LANWhisper`) |
+| [`subdomains_quick_win.txt`](subdomains_quick_win.txt) | **100** | Top-100 lateral-movement targets for internal pentest — fastest path to creds, code execution, or DA |
 
 Most public wordlists were last seriously refreshed when jQuery was still in fashion. AwesomeWL extends the classic SecLists / dirsearch / dirbuster heritage with **~5,000 modern entries** that target what teams actually deploy today: Claude / Cursor / Aider configs, MCP servers, Wrangler `.dev.vars`, Drizzle / Convex schemas, AI agent prompt files, and Cloudflare Workers internals.
 
@@ -126,6 +127,36 @@ xargs -I {} -a live.txt ffuf -w Common_list.txt -u {}/FUZZ -mc 200,401,403
 ---
 
 ## What makes the lists different
+
+### `subdomains_quick_win.txt` — 100 lateral-movement targets
+
+A focused 100-entry list for **internal pentest first-blood**. Run it first against the corp DNS — every hit is a system that, when compromised, typically yields one of: source code + pipeline secrets, plaintext domain credentials, code-push to other hosts, or full hypervisor / backup access.
+
+```bash
+./lanwhisper.py --domain corp.local --server 10.0.0.53 \
+                --source subdomains_quick_win.txt --output ./quick_win
+```
+
+**Categories** (rough tier-1 lateral-movement value):
+
+| Category | Examples |
+|---|---|
+| **CI/CD & source** | `gitlab`, `jenkins`, `bitbucket`, `gitea`, `gerrit`, `teamcity`, `sonarqube`, `octopus`, `spinnaker` |
+| **Artifact registries** | `nexus`, `artifactory`, `harbor`, `quay`, `jfrog` |
+| **Secrets & PAM** | `vault`, `cyberark`, `pvwa`, `thycotic`, `teleport`, `boundary`, `beyondtrust`, `secret-server` |
+| **Identity / SSO** | `okta`, `jumpcloud`, `adfs`, `adcs`, `keycloak`, `sailpoint`, `pingfederate` |
+| **Hypervisors** | `vcenter`, `esxi`, `vsphere`, `proxmox`, `hyperv`, `ovirt`, `xenserver` |
+| **K8s** | `rancher`, `openshift`, `portainer`, `kubernetes-dashboard`, `k8s` |
+| **Backup (DA-grade creds)** | `veeam`, `rubrik`, `cohesity`, `commvault`, `netbackup` |
+| **OOB hardware** | `idrac`, `ilo`, `ipmi`, `drac`, `bmc` |
+| **Logs & wikis (cred goldmines)** | `splunk`, `elastic`, `kibana`, `grafana`, `graylog`, `confluence`, `wiki`, `sharepoint`, `jira`, `servicenow` |
+| **Endpoint / fleet mgmt** | `intune`, `jamf`, `sccm`, `mecm`, `wsus`, `crowdstrike`, `sentinelone` |
+| **Network appliances** | `fortimanager`, `panorama`, `fmc`, `cisco-ise`, `ucs-mgr` |
+| **Mail / NTLM relay** | `exchange`, `owa`, `autodiscover` |
+| **Remote access** | `vpn`, `anyconnect`, `pulse-secure`, `citrix-gateway`, `rdweb` |
+| **Config mgmt / IaC** | `ansible-tower`, `awx`, `puppet`, `saltmaster`, `rundeck`, `spacelift`, `terraform-enterprise` |
+
+> **Why these specifically:** every entry on this list has one of three properties → (1) typically holds plaintext creds or LDAP binds, (2) lets you push code/binaries to other hosts, or (3) gives you administrator access to the underlying compute (hypervisor, backup, OOB, MDM). Hit one and you're often a single misconfig away from domain admin.
 
 ### `Common_list.txt` — coverage map
 
