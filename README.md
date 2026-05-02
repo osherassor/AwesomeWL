@@ -11,7 +11,7 @@
 | File | Lines | Purpose |
 |---|---:|---|
 | [`Common_list.txt`](Common_list.txt) | **25,265** | Files & directories for content discovery (`ffuf`, `feroxbuster`, `gobuster`, `dirsearch`) |
-| [`subdomains`](subdomains) | **6,933** | Subdomain candidates for DNS brute-forcing (`puredns`, `shuffledns`, `amass`) |
+| [`subdomains`](subdomains) | **10,065** | Subdomain candidates for DNS brute-forcing — internal + external recon (`puredns`, `shuffledns`, `amass`) |
 
 ### `subdomains` — modernized for 2025-2026
 
