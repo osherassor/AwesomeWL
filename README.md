@@ -21,6 +21,7 @@
 | [`web-application/Common_list.txt`](web-application/Common_list.txt) | **25,265** | Files & directories — content discovery (`ffuf`, `feroxbuster`, `gobuster`, `dirsearch`, `katana`) |
 | [`subdomains/subdomains.txt`](subdomains/subdomains.txt) | **10,065** | Subdomain candidates — internal + external recon (`puredns`, `shuffledns`, `amass`, `LANWhisper`) |
 | [`subdomains/subdomains_quick_win.txt`](subdomains/subdomains_quick_win.txt) | **100** | Top-100 lateral-movement targets for internal pentest — fastest path to creds, code execution, or DA |
+| [`credentials/default_creds.md`](credentials/default_creds.md) | **1,612 creds** | Default-credentials reference — cameras, printers, networking, OOB, DBs, SCADA, IoT, PBX, NAS, backup, identity. Vendor / model / version / user / pass tables across 19 categories |
 
 Most public wordlists were last seriously refreshed when jQuery was still in fashion. AwesomeWL extends the classic SecLists / dirsearch / dirbuster heritage with **~5,000 modern entries** that target what teams actually deploy today: Claude / Cursor / Aider configs, MCP servers, Wrangler `.dev.vars`, Drizzle / Convex schemas, AI agent prompt files, and Cloudflare Workers internals.
 
