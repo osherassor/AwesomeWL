@@ -10689,7 +10689,6 @@ inf
 inflation
 influxdb
 infn.it
-info
 info.cgi
 info.html
 info.json
@@ -22574,7 +22573,6 @@ dhcpd.conf
 etc/network
 etc/cni/net.d
 configmap.yaml
-config.yaml
 rbac.yaml
 role.yaml
 rolebinding.yaml
@@ -22674,7 +22672,6 @@ console/login.jsp
 apache.logs"
 /public/js
 product-list.php
-dvwssr.dll
 document*.pdf
 commodities.php
 seller
@@ -22892,7 +22889,6 @@ cricket/grapher.cgi
 cricket
 grapher.cgi
 password.dat
-access.log
 mysql.conf
 mysql_config
 eml
@@ -22924,7 +22920,6 @@ footer.inc.php
 info.inc.php
 custva.asp
 cgiirc.config
-main.php
 phpMyAdmin
 ManyServers.htm
 vbulletin
