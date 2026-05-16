@@ -25507,3 +25507,33 @@ _api/cloud-data/v1/schemas
 _api/wix-data/v1/schemas
 _api/forms-server/v4/submissions/query
 _api/forms-app/v1/submissions
+
+
+# ── AI-2026 spec files (added 2026-05-17) ──────────────────────────────
+# Public-by-design specs for AI agent discovery:
+ai.txt
+llms-full.txt
+.well-known/llms.txt
+.well-known/mcp
+.well-known/mcp.json
+# MCP server descriptors and configs
+mcp_servers.json
+tools.json
+# Dev-time AI tool configs (when accidentally deployed = real leak)
+.agent/instructions.md
+.continuerules
+.windsurf/rules.md
+copilot-instructions.md
+.tabnine_config.json
+.devin/config.json
+.replit.ai
+# Agent frameworks
+crew.json
+agent.json
+# System prompt / prompt directories
+.prompts/system.txt
+# AI vendor key files (almost always accidentally exposed)
+.env.local
+openai.json
+anthropic.json
+secrets/openai.json

@@ -1,0 +1,85 @@
+# AI-era leak paths (2026 wave) — 50 high-signal files/folders likely to
+# leak prompts, agent instructions, MCP server configs, AI vendor keys,
+# or repo-level AI tooling state when accidentally deployed to prod.
+#
+# Sources: Claude Code (Anthropic), Cursor, Windsurf, Aider, Continue.dev,
+# GitHub Copilot, Codeium, Tabnine, Devin, Bolt, Replit Ghostwriter,
+# OpenAI Codex AGENTS.md, Anthropic llms.txt proposal, MCP discovery spec.
+
+# ── Claude Code (Anthropic) ────────────────────────────────────────────
+CLAUDE.md
+claude.md
+.claude/settings.json
+.claude/CLAUDE.md
+.claude/settings.local.json
+
+# ── Codex / OpenAI / general agent instructions ────────────────────────
+AGENTS.md
+agents.md
+AGENT.md
+.agent/instructions.md
+
+# ── Cursor IDE ─────────────────────────────────────────────────────────
+.cursorrules
+.cursor/rules
+.cursor/mcp.json
+.cursorignore
+
+# ── Windsurf ───────────────────────────────────────────────────────────
+.windsurfrules
+.windsurf/rules.md
+
+# ── Aider ──────────────────────────────────────────────────────────────
+.aider.conf.yml
+.aider.chat.history.md
+.aider.input.history
+
+# ── Continue.dev ───────────────────────────────────────────────────────
+.continue/config.json
+.continuerules
+
+# ── GitHub Copilot ─────────────────────────────────────────────────────
+.github/copilot-instructions.md
+copilot-instructions.md
+.copilotignore
+
+# ── MCP (Model Context Protocol) — hot 2026 surface ────────────────────
+.mcp.json
+mcp.json
+mcp_servers.json
+.well-known/mcp
+.well-known/mcp.json
+tools.json
+.mcp/config.json
+
+# ── LLM-readable site docs (Anthropic's llms.txt proposal) ─────────────
+llms.txt
+llms-full.txt
+.well-known/llms.txt
+ai.txt
+.well-known/ai-plugin.json
+
+# ── System prompts / prompt directories ────────────────────────────────
+system_prompt.txt
+system-prompt.md
+prompts.json
+.prompts/system.txt
+
+# ── AI vendor keys / env (often leaked next to code) ───────────────────
+.env.ai
+.env.local
+secrets/openai.json
+openai.json
+anthropic.json
+
+# ── Other 2026-era AI tools ────────────────────────────────────────────
+.codeium/config.json
+.tabnine_config.json
+.devin/config.json
+bolt.json
+.replit.ai
+
+# ── Agent framework configs ────────────────────────────────────────────
+crew.json
+langchain.json
+agent.json
