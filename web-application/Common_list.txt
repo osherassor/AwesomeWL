@@ -25537,3 +25537,52 @@ agent.json
 openai.json
 anthropic.json
 secrets/openai.json
+
+# ── AI-2026 wave 2 (additional paths added 2026-05-17) ─────────────────
+# A2A (Agent-to-Agent) protocol descriptors:
+.well-known/agent.json
+.well-known/agent-card
+agent-card.json
+agents.json
+# Modern agent SDKs / orchestrators:
+.langgraph/config.json
+.crewai/config.yaml
+.autogen/config.yaml
+# IDE coding assistants (2026 wave):
+.zed/agent.json
+.helix/config.toml
+.cody/config.json
+.cody/rules.md
+.junie/instructions.md
+.augment/rules.md
+.sourcegraph.cody.yaml
+.tabby/config.toml
+.claude-code/settings.json
+# AI vendor SDK config dirs (when accidentally deployed):
+.gpt/instructions.md
+.openai/config.json
+.openai/rules
+.gemini/config.json
+.gemini/rules
+.anthropic/config.json
+.anthropic/rules
+# MCP deeper paths:
+.mcp/instructions.md
+.mcp/servers.json
+mcp/tools.json
+mcp/server.json
+# Prompt directories (high-value when present — system prompts):
+prompts/system.md
+prompts/agent.md
+prompts/system_prompt.md
+.agents/system.md
+.agents/rules.md
+.prompts.json
+# OpenAPI / Swagger alt locations (sometimes hand-offs from ai-plugin.json):
+.well-known/openapi.json
+# Local LLM / promptfile (Ollama / etc):
+.ollama/
+promptfile.yaml
+# Assistants:
+assistants.json
+.assistants/config.json
